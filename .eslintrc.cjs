@@ -7,6 +7,10 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],
+  presets: [
+    ['@babel/preset-env', { targets: { esmodules: true } }],
+    ['@babel/preset-react', { runtime: 'automatic' }],
+  ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
